@@ -8,7 +8,8 @@ public class ProductPage extends BasePage {
     public void selectColor(){
         click(By.cssSelector("label[for='attributes_integration_colourSİYAH']"));
     }
-    public void selectProduct(){
+    public void selectProduct() throws InterruptedException {
+        Thread.sleep(2000);
         findAll(By.cssSelector("li[class='col-md-4 col-sm-6 col-xs-6 set-product-item']")).get(0).click();
     }
     public void verify(){
